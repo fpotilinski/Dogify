@@ -93,10 +93,15 @@ public class Paseo {
 	
 	public void finalizarPaseo() {
 		for(Reserva reserva : reservas) {
-			if reserva.getEstado().equals("DEVUELTO"){
+			if (reserva.getEstado().equals("DEVUELTO")){
 				
+			}else {
+			//lanzar exception
 			}
 		}
+		this.estado = "FINALIZADO";
+		Date horaActual = new Date();
+		this.horaFin = horaActual.getTime();
 	}
 	
 	
