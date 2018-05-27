@@ -10,5 +10,5 @@ public class Usuario {
 	private Direccion direccion;
 	private String test2;
 	
-	private String alala;
+	private String lala;
 }
