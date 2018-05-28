@@ -7,6 +7,7 @@ public class Direccion {
 	private String depto;
 	private String codigoPostal;
 	private String provincia;
+	private String coordenadas;
 	
 	public String getCalle() {
 		return calle;

@@ -10,8 +10,7 @@ public class Usuario {
 	private String apellido;
 	private String tipoDocumento;
 	private String nroDocumento;
-	private Direccion direccion;
 	private Date fechaNacimiento;
-	private ArrayList<Mensaje> bandejaEntrada;
-	private ArrayList<Mensaje> bandejaSalida;
+	private ArrayList<Direccion> direcciones;
+	private ArrayList<Conversacion> conversaciones;
 }
