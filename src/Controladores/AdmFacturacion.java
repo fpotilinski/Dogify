@@ -9,7 +9,6 @@ public class AdmFacturacion {
 	private ArrayList<Factura> facturas;
 	
 	public void facturarReserva(Reserva reserva) {
-		
 	}
 }
 
