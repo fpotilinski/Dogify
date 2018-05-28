@@ -6,6 +6,9 @@ public class Reserva {
 	private String estado;
 	private Perro perro;
 	private ArrayList<Mensaje> mensajes;
+	private String horaRetiro;
+	private String horaDevolucion;
+	private Direccion direccion;
 	public String getEstado() {
 		return estado;
 	}

@@ -7,15 +7,16 @@ public class Paseo {
 	private int idPaseo;
 	private Date fecha;
 	private String hora;
+	private int duracion;
 	private int capacidad;
-	private long horaInicio;
-	private long horaFin;
+	private String horaInicio;
+	private String horaFin;
 	private String estado;
 	private ArrayList<String> fotos;
 	private float tarifa;
-	private float prueba;
 	private String ubicacionActual;
 	private ArrayList<Reserva> reservas;
+	
 	public int getIdPaseo() {
 		return idPaseo;
 	}
@@ -86,9 +87,9 @@ public class Paseo {
 	public void iniciarPaseo() {
 		this.estado = "INICIADO";
 		Date horaActual = new Date();
-		this.horaInicio = horaActual.getTime();
+		this.horaInicio = Long.toString(horaActual.getTime());
 		for(Reserva reserva : reservas) {
-			reserva.se
+			
 		}
 	}
 	
@@ -102,7 +103,7 @@ public class Paseo {
 		}
 		this.estado = "FINALIZADO";
 		Date horaActual = new Date();
-		this.horaFin = horaActual.getTime();
+		this.horaFin = Long.toString(horaActual.getTime());
 	}
 	
 	
