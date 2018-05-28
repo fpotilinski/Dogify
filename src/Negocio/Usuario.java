@@ -1,5 +1,7 @@
 package Negocio;
 
+import java.util.Date;
+
 public class Usuario {
 	private String email;
 	private String password;
@@ -8,4 +10,5 @@ public class Usuario {
 	private String tipoDocumento;
 	private String nroDocumento;
 	private Direccion direccion;
+	private Date fechaNacimiento;
 }
