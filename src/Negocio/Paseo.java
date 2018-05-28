@@ -13,6 +13,7 @@ public class Paseo {
 	private String estado;
 	private ArrayList<String> fotos;
 	private float tarifa;
+	private float prueba;
 	private String ubicacionActual;
 	private ArrayList<Reserva> reservas;
 	public int getIdPaseo() {
