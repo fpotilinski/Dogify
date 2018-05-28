@@ -1,5 +1,6 @@
 package Negocio;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Usuario {
@@ -11,4 +12,6 @@ public class Usuario {
 	private String nroDocumento;
 	private Direccion direccion;
 	private Date fechaNacimiento;
+	private ArrayList<Mensaje> bandejaEntrada;
+	private ArrayList<Mensaje> bandejaSalida;
 }
