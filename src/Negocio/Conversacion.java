@@ -7,6 +7,12 @@ public class Conversacion {
 	private Usuario usuario2;
 	private ArrayList<Mensaje> mensajes;
 	
+	public Conversacion(Usuario usuario1, Usuario usuario2, ArrayList<Mensaje> mensajes) {
+		this.usuario1 = usuario1;
+		this.usuario2 = usuario2;
+		this.mensajes = mensajes;
+	}
+	
 	public Usuario getUsuario1() {
 		return usuario1;
 	}
@@ -25,6 +31,4 @@ public class Conversacion {
 	public void setMensajes(ArrayList<Mensaje> mensajes) {
 		this.mensajes = mensajes;
 	}
-	
-	
 }

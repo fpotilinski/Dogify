@@ -8,12 +8,27 @@ public class Usuario {
 	private String password;
 	private String nombre;
 	private String apellido;
+	private String sexo;
+	private Date fechaNacimiento;
 	private String tipoDocumento;
 	private String nroDocumento;
-	private Date fechaNacimiento;
-	private Direccion direccionFacturacion;
 	private ArrayList<Direccion> direcciones;
 	private ArrayList<Conversacion> conversaciones;
+	
+	public Usuario(String email, String password, String nombre, String apellido, String sexo,
+			Date fechaNacimiento, String tipoDocumento, String nroDocumento,
+			ArrayList<Direccion> direcciones, ArrayList<Conversacion> conversaciones) {
+		this.email = email;
+		this.password = password;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.sexo = sexo;
+		this.fechaNacimiento = fechaNacimiento;
+		this.tipoDocumento = tipoDocumento;
+		this.nroDocumento = nroDocumento;
+		this.direcciones = direcciones;
+		this.conversaciones = conversaciones;
+	}
 	
 	public String getEmail() {
 		return email;
@@ -56,12 +71,6 @@ public class Usuario {
 	}
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
-	}
-	public Direccion getDireccionFacturacion() {
-		return direccionFacturacion;
-	}
-	public void setDireccionFacturacion(Direccion direccionFacturacion) {
-		this.direccionFacturacion = direccionFacturacion;
 	}
 	public ArrayList<Direccion> getDirecciones() {
 		return direcciones;
