@@ -9,17 +9,26 @@ public class Reserva {
 	private Direccion direccion;
 	private String horaRetiro;
 	private String horaDevolucion;
-	private ArrayList<Mensaje> mensajes;
 	
-	public Reserva(int idReserva, Perro perro, String estado, Direccion direccion, String horaRetiro,
-			String horaDevolucion, ArrayList<Mensaje> mensajes) {
+	public Reserva(int idReserva, Perro perro, Direccion direccion, String estado, String horaRetiro,
+			String horaDevolucion) {
 		this.idReserva = idReserva;
 		this.perro = perro;
 		this.estado = estado;
 		this.direccion = direccion;
 		this.horaRetiro = horaRetiro;
 		this.horaDevolucion = horaDevolucion;
-		this.mensajes = mensajes;
+	}
+	
+	// Actualizar estado a CANCELADA
+	public void actualizarEstado(String estado) {
+		this.estado = estado;
+	}
+	
+	// Actualizar estado a RETIRADO
+	public void actualizarEstado(String estado, String horaRetiro){
+		this.estado = estado;
+		this.horaRetiro = horaRetiro;
 	}
 
 	public int getIdReserva() {
@@ -68,14 +77,6 @@ public class Reserva {
 
 	public void setHoraDevolucion(String horaDevolucion) {
 		this.horaDevolucion = horaDevolucion;
-	}
-
-	public ArrayList<Mensaje> getMensajes() {
-		return mensajes;
-	}
-
-	public void setMensajes(ArrayList<Mensaje> mensajes) {
-		this.mensajes = mensajes;
 	}
 	
 }

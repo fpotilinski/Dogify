@@ -1,6 +1,7 @@
 package Negocio;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Conversacion {
 	private Usuario usuario1;
@@ -11,6 +12,11 @@ public class Conversacion {
 		this.usuario1 = usuario1;
 		this.usuario2 = usuario2;
 		this.mensajes = mensajes;
+	}
+	
+	public void nuevoMensaje(Date fecha, String hora, String mensaje) {
+		Mensaje nuevoMensaje = new Mensaje(fecha, hora, mensaje);
+		mensajes.add(nuevoMensaje);
 	}
 	
 	public Usuario getUsuario1() {

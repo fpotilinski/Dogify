@@ -18,6 +18,12 @@ public class Cliente extends Usuario{
 		this.perros = perros;
 		this.cuentaCorriente = cuentaCorriente;
 	}
+	
+	public void altaPerro(int idPerro, String nombre, String raza, String tamanio, String sexo, int edad,
+			boolean usaBozal, Date fechaUltimaAntirrabica, String observaciones) {
+		Perro perro = new Perro(idPerro, nombre, raza, tamanio, sexo, edad, usaBozal, fechaUltimaAntirrabica, observaciones);
+		perros.add(perro);
+	}
 
 	public Direccion getDireccionFacturacion() {
 		return direccionFacturacion;

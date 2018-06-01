@@ -3,6 +3,7 @@ package Negocio;
 import java.util.Date;
 
 public class Perro {
+	private int idPerro;
 	private String nombre;
 	private String raza;
 	private String tamanio;
@@ -12,8 +13,9 @@ public class Perro {
 	private Date fechaUltimaAntirrabica;
 	private String observaciones;
 	
-	public Perro(String nombre, String raza, String tamanio, String sexo, int edad, boolean usaBozal,
+	public Perro(int idPerro, String nombre, String raza, String tamanio, String sexo, int edad, boolean usaBozal,
 			Date fechaUltimaAntirrabica, String observaciones) {
+		this.idPerro = idPerro;
 		this.nombre = nombre;
 		this.raza = raza;
 		this.tamanio = tamanio;
@@ -22,6 +24,14 @@ public class Perro {
 		this.usaBozal = usaBozal;
 		this.fechaUltimaAntirrabica = fechaUltimaAntirrabica;
 		this.observaciones = observaciones;
+	}
+	
+	public int getIdPerro() {
+		return idPerro;
+	}
+	
+	public void setIdPerro(int idPerro) {
+		this.idPerro = idPerro;
 	}
 
 	public String getNombre() {

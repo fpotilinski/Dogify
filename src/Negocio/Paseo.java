@@ -18,8 +18,8 @@ public class Paseo {
 	private ArrayList<String> fotos;
 	
 	public Paseo(int idPaseo, Date fecha, String hora, int duracion, int capacidad, float tarifa,
-			String estado, ArrayList<Reserva> reservas, String horaInicio, String horaFin,
-			String ubicacionActual, ArrayList<String> fotos) {
+			String estado, String horaInicio, String horaFin,
+			String ubicacionActual) {
 		this.idPaseo = idPaseo;
 		this.fecha = fecha;
 		this.hora = hora;
@@ -27,11 +27,27 @@ public class Paseo {
 		this.capacidad = capacidad;
 		this.tarifa = tarifa;
 		this.estado = estado;
-		this.reservas = reservas;
+		this.reservas = new ArrayList<Reserva>();
 		this.horaInicio = horaInicio;
 		this.horaFin = horaFin;
 		this.ubicacionActual = ubicacionActual;
-		this.fotos = fotos;
+		this.fotos = new ArrayList<String>();
+	}
+	
+	public void altaReserva(int idReserva, Perro perro, Direccion direccion) {
+		Reserva reserva = new Reserva(idReserva, perro, direccion, "PENDIENTE", null, null);
+		reservas.add(reserva);
+	}
+	
+	// Actualizar estado a CANCELADO
+	public void actualizarEstado(String estado) {
+		for(Reserva reserva : reservas) {
+			reserva.actualizarEstado("CANCELADA");
+		}
+	}
+	
+	public void agregarFoto(String foto) {
+		fotos.add(foto);
 	}
 
 	public int getIdPaseo() {

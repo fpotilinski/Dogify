@@ -1,6 +1,10 @@
 package Controladores;
 
 import java.util.ArrayList;
+
+import Negocio.Cliente;
+import Negocio.Paseador;
+import Negocio.Perro;
 import Negocio.Usuario;
 
 public class AdmUsuarios {
@@ -10,7 +14,28 @@ public class AdmUsuarios {
 		
 	}
 	
+	public void modificarUsuarioCliente(Cliente cliente) {
+		
+	}
+	
 	public void altaUsuarioPaseador() {
+		
+	}
+	
+	public void modificarUsuarioPaseador(Paseador paseador) {
+		
+	}
+	
+	public void altaPerro() {
+		
+	}
+	
+	
+	public void modificarPerro(Perro perro) {
+		
+	}
+	
+	public void bajaPerro(Perro perro) {
 		
 	}
 	
