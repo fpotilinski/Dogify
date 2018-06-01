@@ -19,6 +19,11 @@ public class Paseador extends Usuario{
 		this.paseos = paseos;
 		this.calificaciones = calificaciones;
 	}
+	
+	public void ingresarCalificacion(Reserva reserva, int puntaje, String comentario) {
+		Calificacion calificacion = new Calificacion(reserva, puntaje, comentario);
+		calificaciones.add(calificacion);
+	}
 
 	public String getNroRegistroAPRA() {
 		return nroRegistroAPRA;

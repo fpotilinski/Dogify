@@ -24,6 +24,10 @@ public class Cliente extends Usuario{
 		Perro perro = new Perro(idPerro, nombre, raza, tamanio, sexo, edad, usaBozal, fechaUltimaAntirrabica, observaciones);
 		perros.add(perro);
 	}
+	
+	public void actualizarCuentaCorriente(float monto) {
+		this.cuentaCorriente += monto;
+	}
 
 	public Direccion getDireccionFacturacion() {
 		return direccionFacturacion;
