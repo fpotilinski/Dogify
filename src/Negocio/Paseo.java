@@ -44,6 +44,13 @@ public class Paseo {
 		for(Reserva reserva : reservas) {
 			reserva.actualizarEstado("CANCELADA");
 		}
+		this.estado = estado;
+	}
+	
+	// Actualizar estado a INICIADO
+	public void actualizarEstado(String estado, String horaInicio) {
+		this.estado = estado;
+		this.horaInicio = horaInicio;
 	}
 	
 	public void agregarFoto(String foto) {
