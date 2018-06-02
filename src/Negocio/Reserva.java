@@ -18,15 +18,19 @@ public class Reserva {
 		this.horaDevolucion = horaDevolucion;
 	}
 	
-	// Actualizar estado a CANCELADA
+	// Actualizar estado a CANCELADA o INICIADA o FACTURADA
 	public void actualizarEstado(String estado) {
 		this.estado = estado;
 	}
 	
-	// Actualizar estado a RETIRADO
-	public void actualizarEstado(String estado, String horaRetiro){
+	// Actualizar estado a RETIRADO o DEVUELTO
+	public void actualizarEstado(String estado, String hora){
 		this.estado = estado;
-		this.horaRetiro = horaRetiro;
+		if (estado.equals("RETIRADO")) {
+			this.horaRetiro = hora;
+		}else {
+			this.horaDevolucion = hora;
+		}
 	}
 
 	public int getIdReserva() {
